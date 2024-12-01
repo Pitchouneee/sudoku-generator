@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Grille de Sudoku</title>
+    <title>Suduko grid</title>
     <link rel="stylesheet" th:href="@{/css/sudoku.css}">
 </head>
 <body>
 <div class="container">
-    <h1>Sudoku - Niveau [[${sudoku.difficulty}]]</h1>
+    <a th:href="@{/}" class="back-button">
+        <span class="back-button-icon">&#8592;</span>
+        Back
+    </a>
+
+    <h1>Sudoku - Level <span th:text="${sudoku.difficulty}">Easy</span></h1>
+
     <table class="sudoku-grid">
-        <tr th:each="row, rowStat : ${sudoku.grid}">
-            <td th:each="cell, colStat : row"
+        <tr th:each="row : ${sudoku.grid}">
+            <td th:each="cell : ${row}"
                 th:text="${cell != 0 ? cell : ''}"
                 th:classappend="${cell != 0 ? 'filled' : 'empty'}">
             </td>
         </tr>
     </table>
-    <a th:href="@{/}" class="btn">Nouvelle grille</a>
+    <a th:href="@{/}" class="btn">New grid</a>
 </div>
 </body>
 </html>

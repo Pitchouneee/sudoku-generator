@@ -10,5 +10,5 @@ import lombok.Setter;
 public class Sudoku {
 
     private int[][] grid;
-    private String difficulty;
+    private Difficulty difficulty;
 }

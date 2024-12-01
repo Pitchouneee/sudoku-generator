@@ -1,3 +1,8 @@
 server.port: 8080
 spring:
   application.name: sudoku-generator
+app:
+  cells-to-remove:
+    easy: 20
+    medium: 40
+    hard: 60

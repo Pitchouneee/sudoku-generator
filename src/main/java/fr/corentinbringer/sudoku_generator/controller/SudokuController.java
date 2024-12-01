@@ -20,7 +20,7 @@ public class SudokuController {
     }
 
     @GetMapping("/sudoku")
-    public String generateSudoku(@RequestParam(defaultValue = "moyen") String difficulty,
+    public String generateSudoku(@RequestParam(defaultValue = "medium") String difficulty,
                                  Model model) {
         Sudoku sudoku = sudokuService.generateSudoku(difficulty);
         model.addAttribute("sudoku", sudoku);
