@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.sudoku-grid {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.sudoku-grid td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 20px;
+}
+
+.sudoku-grid td.filled {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.sudoku-grid td.empty {
+    background-color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

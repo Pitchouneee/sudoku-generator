@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Générateur de Sudoku</title>
+    <link rel="stylesheet" th:href="@{/css/sudoku.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Générateur de Sudoku</h1>
+    <div class="difficulty-buttons">
+        <a th:href="@{/sudoku(difficulty='facile')}" class="btn">Facile</a>
+        <a th:href="@{/sudoku(difficulty='moyen')}" class="btn">Moyen</a>
+        <a th:href="@{/sudoku(difficulty='difficile')}" class="btn">Difficile</a>
+    </div>
+</div>
+</body>
+</html>
