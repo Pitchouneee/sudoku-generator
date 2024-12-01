@@ -20,7 +20,7 @@ app:
     hard: 60
 ```
 
-## Installation and Execution
+## Installation and execution
 
 1. Clone the Git repository: `git clone https://github.com/Pitchouneee/sudoku-generator.git`
 2. Navigate to the project directory: `cd sudoku-generator`
@@ -39,6 +39,6 @@ This project is licensed under the MIT License. You are free to use, modify, and
 
 Contributions are welcome ! Feel free to open issues or submit pull requests on the GitHub repository.
 
-## Future Developments
+## Future developments
 
 In upcoming versions, a feature will be added to display the solution of the grid alongside the generated grid.
