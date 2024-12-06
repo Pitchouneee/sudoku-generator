@@ -1,4 +1,4 @@
-package fr.corentinbringer.sudoku_generator;
+package fr.corentinbringer.sudokugenerator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

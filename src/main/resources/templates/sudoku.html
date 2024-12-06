@@ -15,14 +15,27 @@
 
     <h1>Sudoku - Level <span th:text="${sudoku.difficulty}">Easy</span></h1>
 
-    <table class="sudoku-grid">
-        <tr th:each="row : ${sudoku.grid}">
-            <td th:each="cell : ${row}"
-                th:text="${cell != 0 ? cell : ''}"
-                th:classappend="${cell != 0 ? 'filled' : 'empty'}">
-            </td>
-        </tr>
-    </table>
+    <div class="tables-container">
+        <table class="sudoku-grid">
+            <tr th:each="row : ${sudoku.grid}">
+                <td th:each="cell : ${row}"
+                    th:text="${cell != 0 ? cell : ''}"
+                    th:classappend="${cell != 0 ? 'filled' : 'empty'}">
+                </td>
+            </tr>
+        </table>
+
+        <table class="sudoku-grid">
+            <tr th:each="row, rowStat : ${sudoku.solution}">
+                <td th:each="cell, colStat : ${row}"
+                    th:with="cellValue=${cell}, originalCell=${sudoku.getCellFromGrid(rowStat.index, colStat.index)}"
+                    th:text="${cellValue}"
+                    th:classappend="${cellValue != originalCell} ? 'solution-cell' : 'filled'">
+                </td>
+            </tr>
+        </table>
+    </div>
+
     <a th:href="@{/}" class="btn">New grid</a>
 </div>
 </body>

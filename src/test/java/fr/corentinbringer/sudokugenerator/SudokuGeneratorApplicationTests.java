@@ -1,4 +1,4 @@
-package fr.corentinbringer.sudoku_generator;
+package fr.corentinbringer.sudokugenerator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

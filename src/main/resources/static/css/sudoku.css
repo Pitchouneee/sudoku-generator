@@ -63,3 +63,12 @@ body {
     margin-right: 5px;
     font-size: 18px;
 }
+
+.tables-container {
+    display: flex;
+    gap: 20px;
+}
+
+.solution-cell {
+    background-color: #c8e6c9;
+}

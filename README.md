@@ -38,7 +38,3 @@ This project is licensed under the MIT License. You are free to use, modify, and
 ## Contributions
 
 Contributions are welcome ! Feel free to open issues or submit pull requests on the GitHub repository.
-
-## Future developments
-
-In upcoming versions, a feature will be added to display the solution of the grid alongside the generated grid.

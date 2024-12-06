@@ -1,4 +1,4 @@
-package fr.corentinbringer.sudoku_generator.model;
+package fr.corentinbringer.sudokugenerator.model;
 
 public enum Difficulty {
 

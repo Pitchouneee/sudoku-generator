@@ -1,7 +1,7 @@
-package fr.corentinbringer.sudoku_generator.service;
+package fr.corentinbringer.sudokugenerator.service;
 
-import fr.corentinbringer.sudoku_generator.model.Difficulty;
-import fr.corentinbringer.sudoku_generator.model.Sudoku;
+import fr.corentinbringer.sudokugenerator.model.Difficulty;
+import fr.corentinbringer.sudokugenerator.model.Sudoku;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,6 @@ public class SudokuService {
             log.error("Illegal difficulty");
         }
 
-        int[][] grid = sudokuGenerator.generateGrid(diff);
-        return new Sudoku(grid, diff);
+        return sudokuGenerator.generateGridWithSolution(diff);
     }
 }

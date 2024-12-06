@@ -1,7 +1,7 @@
-package fr.corentinbringer.sudoku_generator.controller;
+package fr.corentinbringer.sudokugenerator.controller;
 
-import fr.corentinbringer.sudoku_generator.model.Sudoku;
-import fr.corentinbringer.sudoku_generator.service.SudokuService;
+import fr.corentinbringer.sudokugenerator.model.Sudoku;
+import fr.corentinbringer.sudokugenerator.service.SudokuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

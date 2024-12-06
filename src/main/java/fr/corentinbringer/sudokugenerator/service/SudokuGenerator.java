@@ -1,6 +1,7 @@
-package fr.corentinbringer.sudoku_generator.service;
+package fr.corentinbringer.sudokugenerator.service;
 
-import fr.corentinbringer.sudoku_generator.model.Difficulty;
+import fr.corentinbringer.sudokugenerator.model.Difficulty;
+import fr.corentinbringer.sudokugenerator.model.Sudoku;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -18,11 +19,21 @@ public class SudokuGenerator {
     @Value("${app.cells-to-remove.hard}")
     private int CELLS_TO_REMOVE_HARD;
 
-    public int[][] generateGrid(Difficulty difficulty) {
+    public Sudoku generateGridWithSolution(Difficulty difficulty) {
         int[][] grid = new int[9][9];
         fillGrid(grid);
+        int[][] solution = copyGrid(grid);
         removeNumbers(grid, difficulty);
-        return grid;
+        return new Sudoku(grid, solution, difficulty);
+    }
+
+    private int[][] copyGrid(int[][] grid) {
+        int[][] copy = new int[9][9];
+        for (int i = 0; i < 9; i++) {
+            System.arraycopy(grid[i], 0, copy[i], 0, 9);
+        }
+
+        return copy;
     }
 
     private boolean fillGrid(int[][] grid) {
